@@ -1,14 +1,10 @@
 
-
-def read_salaries(path:str) -> list[float] | None:
+def read_data(path:str) -> list[str] | None:
     try:
-
         with open(path, "r", encoding="UTF-8") as salaries_file:
             salaries = list()
             for line in salaries_file.readlines():
-                _, salary = line.strip().split(",")
-                salary = int(salary)
-                salaries.append((salary))
+                salaries.append(line.strip())
             return salaries
     except FileNotFoundError as fnf:
         print(fnf)
@@ -19,16 +15,21 @@ def read_salaries(path:str) -> list[float] | None:
         print("Incorrect data in the file")
         return None
 
-def get_total_and_avg(data:list[int]) -> tuple[int, int] | tuple[None, None]:
-    if data:
-        total_sum = sum(data)
-        avg = total_sum/len(data)
+def process_salaries(dev_salaries:list[str]) -> tuple[int, int] | tuple[None, None]:
+    salaries=list()
+    for dev_salary in dev_salaries:
+        _, salary = dev_salary.split(",")
+        salary = int(salary)
+        salaries.append(salary)
+    if salaries:
+        total_sum = sum(salaries)
+        avg = total_sum/len(salaries)
         return (total_sum, avg)
     else:
         return (None, None)
 
 def total_salary(path:str) -> tuple[int, int]:
-    return get_total_and_avg(read_salaries(path))
+    return process_salaries(read_data(path))
 
 
 def main():
