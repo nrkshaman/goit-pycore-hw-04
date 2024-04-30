@@ -9,7 +9,7 @@ def get_cats_info(path:str) -> list[dict[str, str]]:
     return cats_info
 
 def main():
-    print(get_cats_info("task2/test.txt"))
+    print(get_cats_info("test.txt"))
 
 if __name__ == "__main__":
     main()

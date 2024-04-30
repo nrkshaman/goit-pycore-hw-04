@@ -33,7 +33,7 @@ def total_salary(path:str) -> tuple[int, int]:
 
 
 def main():
-    total, average = total_salary("task1/test.txt")
+    total, average = total_salary("test.txt")
     print(f"Загальна сума заробітної плати: {total}, Середня заробітна плата: {average}")
 
 
