@@ -3,8 +3,8 @@ from colorama import Fore
 
 BANNER = """
    _                                       
-  /   _  ._ _|_  _.  _ _|_  _   |_   _ _|_ 
-  \_ (_) | | |_ (_| (_  |_ _>   |_) (_) |_ 
+  /   _  ._  _|_  _.  _ _|_  _   |_   _ _|_ 
+  \\_ (_) | |  |_ (_| (_  |_ _>   |_) (_) |_ 
 """
 GREETING = """Hi! I am your bot-helper! I will help you to manage your contacts list.
 Enter `help` for more information"""
