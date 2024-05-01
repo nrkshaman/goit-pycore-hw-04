@@ -33,7 +33,7 @@ def phone_contact(args:list[str], contacts:dict[str, str]) -> str:
         return ERROR + " Contact does not exist."
 
 def all_contact(contacts:dict[str, str]) -> str:
-    all = ""
+    all = f"{'Name':<15}{'| Phone'}\n" + "-"*32 + "\n"
     for name in contacts:
-        all += f"{"Name: " + f'{name}' : <20}" + f"Phone: {contacts[name]}\n"
+        all += f"{name: <15}| {contacts[name]}\n"
     return all.strip()
