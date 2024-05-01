@@ -1,4 +1,3 @@
-import os
 from pathlib import Path
 from sys import argv
 from nice_print import print_dir, print_file, print_error
@@ -28,4 +27,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-

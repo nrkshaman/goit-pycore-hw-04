@@ -1,4 +1,4 @@
-from task1.task1 import read_data
+from task1.main import read_data
 
 def get_cats_info(path:str) -> list[dict[str, str]]:
     cats = read_data(path)
