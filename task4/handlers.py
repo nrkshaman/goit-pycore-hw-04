@@ -35,5 +35,5 @@ def phone_contact(args:list[str], contacts:dict[str, str]) -> str:
 def all_contact(contacts:dict[str, str]) -> str:
     all = ""
     for name in contacts:
-        all += f"Name: {name} Phone: {contacts[name]}\n"
+        all += f"{"Name: " + f'{name}' : <20}" + f"Phone: {contacts[name]}\n"
     return all.strip()
